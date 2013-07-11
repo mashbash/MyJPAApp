@@ -1,0 +1,123 @@
+11 Jul 2013 16:21:47,608 INFO  ~ Starting /home/nigel/development/projects/myJPAapp
+11 Jul 2013 16:21:48,108 WARN  ~ You're running Play! in DEV mode
+11 Jul 2013 16:21:48,204 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+11 Jul 2013 16:21:51,630 INFO  ~ Connected to jdbc:mysql://localhost:3306/MyFirstModel?userUnicode=true&characterEncoding=utf8
+11 Jul 2013 16:21:52,781 ERROR ~ 
+
+@6f07hohfj
+Internal Server Error (500) for request GET /
+
+JPA error
+A JPA error occurred (Unable to build EntityManagerFactory): No identifier specified for entity: models.inheritanceJPA.Sedan
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:269)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
+	at play.Play.start(Play.java:526)
+	at play.Play.detectChanges(Play.java:642)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: models.inheritanceJPA.Sedan
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:268)
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:223)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:686)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:4035)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3989)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1398)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1375)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1519)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1100)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:904)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:267)
+	... 5 more
+11 Jul 2013 16:22:20,025 INFO  ~ Application 'myJPAapp' is now started !
+11 Jul 2013 16:39:43,652 ERROR ~ 
+
+@6f07hohfk
+Internal Server Error (500) for request GET /
+
+JPA error
+A JPA error occurred (Unable to build EntityManagerFactory): No identifier specified for entity: models.inheritance.tableperclasshierarchy.Apple
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:269)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
+	at play.Play.start(Play.java:526)
+	at play.Play.detectChanges(Play.java:642)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: models.inheritance.tableperclasshierarchy.Apple
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:268)
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:223)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:686)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:4035)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3989)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1398)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1375)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1519)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1100)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:904)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:267)
+	... 5 more
+11 Jul 2013 16:40:55,701 ERROR ~ 
+
+@6f07hohfl
+Internal Server Error (500) for request GET /
+
+JPA error
+A JPA error occurred (Unable to build EntityManagerFactory): No identifier specified for entity: models.inheritance.tableperclasshierarchy.Orange
+
+play.exceptions.JPAException: Unable to build EntityManagerFactory
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:269)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
+	at play.Play.start(Play.java:526)
+	at play.Play.detectChanges(Play.java:642)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: models.inheritance.tableperclasshierarchy.Orange
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:268)
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:223)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:686)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:4035)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3989)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1398)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1375)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1519)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1100)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:904)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:267)
+	... 5 more
+11 Jul 2013 16:44:41,019 ERROR ~ 
+
+@6f07hohfm
+Internal Server Error (500) for request GET /
+
+Oops: ClassCastException
+An unexpected error occured caused by exception ClassCastException: org.hibernate.mapping.SingleTableSubclass cannot be cast to org.hibernate.mapping.RootClass
+
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Play.start(Play.java:556)
+	at play.Play.detectChanges(Play.java:642)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.ClassCastException: org.hibernate.mapping.SingleTableSubclass cannot be cast to org.hibernate.mapping.RootClass
+	at org.hibernate.cfg.annotations.PropertyBinder.bind(PropertyBinder.java:209)
+	at org.hibernate.cfg.annotations.PropertyBinder.makePropertyValueAndBind(PropertyBinder.java:200)
+	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:2061)
+	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:796)
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:707)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:4035)
+	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3989)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1398)
+	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1375)
+	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1519)
+	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
+	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1100)
+	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:904)
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:267)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
+	at play.Play.start(Play.java:526)
+	... 3 more
