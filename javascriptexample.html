@@ -1,0 +1,51 @@
+#{set 'moreScripts' }
+	#{script src: 'jquery.validate.js' /}
+	#{script src: 'jquery.validation.functions.js' /}
+	
+	<script type="text/javascript">
+		(function($){
+			$(document).ready(function() {
+				
+				$("#birthday").datepicker({
+					showButtonPanel: false,
+					changeMonth: true,
+					changeYear: true,
+					dateFormat: 'dd-mm-yy',
+					defaultDate: '-30y',
+					yearRange: 'c-100',
+					maxDate: new Date,
+					onClose: function(dateText, dp) {
+						$("#birthday").datepicker("setDate", new Date(dp.selectedYear, dp.selectedMonth, dp.selectedDay));
+					}
+				});
+				
+				//in onClose, the callback is implemented in the background so we don't need to define it but the
+				//example below shows how it is implemented
+				function test( callback ) {
+					$("#birthday").on('change', function(event){
+						var value = $(event.currentTarget).val();
+						if ( typeof callback === "function" )
+							callback(value, $(event.currentTarget));
+						else 
+							console.log("callback is not defined!")				
+					})
+				}
+				
+				test(function(value, ele){
+					console.log( ele );
+					console.log( value );
+				})
+				
+				var anotherfunction = function( v, e ) {
+					console.log( e );
+					console.log( v );
+				}
+				
+				test(anotherfunction);
+				
+			})
+		})(jQuery)
+		
+	</script>
+	#{get 'moreScripts' /}
+#{/set}

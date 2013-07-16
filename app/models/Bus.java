@@ -14,29 +14,28 @@ import play.db.jpa.Model;
 public class Bus extends Model {
 	
 	@ManyToMany(cascade = CascadeType.ALL)
-	
 	//defines the association table
-	@JoinTable(name = "Bus_MyFirstModel", //name of the table
+	@JoinTable(name = "Bus_User", //name of the table
 		joinColumns = { @JoinColumn(name = "Bus_id")}, //this refers to a column in this class
-		inverseJoinColumns = { @JoinColumn(name="MyFirstModel_id")}) //refers to the column in the inverse class
-	public List<MyFirstModel> users;
+		inverseJoinColumns = { @JoinColumn(name="User_id")}) //refers to the column in the inverse class
+	public List<User> users;
 	
 	public Integer number;
 	
 	public Bus(Integer number) {
 		this.number = number;
+		this.users = new ArrayList<User>();
 	}
 	
-//	public String toString() {
-//		return String.valueOf(number);
-//	}
-	
-	public static Bus findOrCreateByNum(Integer number) {
-		Bus bus = Bus.find("ByNumber", number).first();
+	public static Bus findOrCreateByNum(Integer number, User user) {
+		Bus bus = Bus.find("number = ?", number).first();
 		if(bus == null) {
 			bus = new Bus(number);
 		}
+		bus.users.add(user);
 		return bus;
 	}
+	
+
 
 }

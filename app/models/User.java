@@ -4,13 +4,12 @@ import java.util.*;
 
 import javax.persistence.*;
 
-import org.hibernate.annotations.CollectionOfElements;
 
 
 import play.db.jpa.*;
 
 @Entity
-public class MyFirstModel extends Model {
+public class User extends Model {
 
 	@OneToMany (mappedBy = "participant", cascade=CascadeType.ALL)
 	private List<Hobby> hobbies; //convert this to private and then create our own setter, getter and add methods
@@ -31,7 +30,7 @@ public class MyFirstModel extends Model {
 //	@ElementCollection
 //	public List<String> addresses = new ArrayList();
 //	
-	public MyFirstModel(String name, String address) {
+	public User(String name, String address) {
 		this.name = name;
 		this.address = address;
 		this.age = 0;
@@ -88,8 +87,8 @@ public class MyFirstModel extends Model {
 		buses.add(Bus.findOrCreateByNum(number, this));
 	}
 	
-	public static List<MyFirstModel> findByBusNum (Integer number) {
-		return MyFirstModel.find(
+	public static List<User> findByBusNum (Integer number) {
+		return User.find(
 			"select distinct u from MyFirstModel u join u.buses as b where b.number = ? ", number).fetch(); 
 	}
 	

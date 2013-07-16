@@ -1,123 +1,50 @@
-11 Jul 2013 16:21:47,608 INFO  ~ Starting /home/nigel/development/projects/myJPAapp
-11 Jul 2013 16:21:48,108 WARN  ~ You're running Play! in DEV mode
-11 Jul 2013 16:21:48,204 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
-11 Jul 2013 16:21:51,630 INFO  ~ Connected to jdbc:mysql://localhost:3306/MyFirstModel?userUnicode=true&characterEncoding=utf8
-11 Jul 2013 16:21:52,781 ERROR ~ 
-
-@6f07hohfj
-Internal Server Error (500) for request GET /
-
-JPA error
-A JPA error occurred (Unable to build EntityManagerFactory): No identifier specified for entity: models.inheritanceJPA.Sedan
-
-play.exceptions.JPAException: Unable to build EntityManagerFactory
-	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:269)
-	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
-	at play.Play.start(Play.java:526)
-	at play.Play.detectChanges(Play.java:642)
-	at play.Invoker$Invocation.init(Invoker.java:198)
-	at Invocation.HTTP Request(Play!)
-Caused by: org.hibernate.AnnotationException: No identifier specified for entity: models.inheritanceJPA.Sedan
-	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:268)
-	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:223)
-	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:686)
-	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:4035)
-	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3989)
-	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1398)
-	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1375)
-	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1519)
-	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
-	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1100)
-	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:904)
-	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:267)
-	... 5 more
-11 Jul 2013 16:22:20,025 INFO  ~ Application 'myJPAapp' is now started !
-11 Jul 2013 16:39:43,652 ERROR ~ 
-
-@6f07hohfk
-Internal Server Error (500) for request GET /
-
-JPA error
-A JPA error occurred (Unable to build EntityManagerFactory): No identifier specified for entity: models.inheritance.tableperclasshierarchy.Apple
-
-play.exceptions.JPAException: Unable to build EntityManagerFactory
-	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:269)
-	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
-	at play.Play.start(Play.java:526)
-	at play.Play.detectChanges(Play.java:642)
-	at play.Invoker$Invocation.init(Invoker.java:198)
-	at Invocation.HTTP Request(Play!)
-Caused by: org.hibernate.AnnotationException: No identifier specified for entity: models.inheritance.tableperclasshierarchy.Apple
-	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:268)
-	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:223)
-	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:686)
-	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:4035)
-	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3989)
-	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1398)
-	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1375)
-	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1519)
-	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
-	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1100)
-	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:904)
-	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:267)
-	... 5 more
-11 Jul 2013 16:40:55,701 ERROR ~ 
-
-@6f07hohfl
-Internal Server Error (500) for request GET /
-
-JPA error
-A JPA error occurred (Unable to build EntityManagerFactory): No identifier specified for entity: models.inheritance.tableperclasshierarchy.Orange
-
-play.exceptions.JPAException: Unable to build EntityManagerFactory
-	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:269)
-	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
-	at play.Play.start(Play.java:526)
-	at play.Play.detectChanges(Play.java:642)
-	at play.Invoker$Invocation.init(Invoker.java:198)
-	at Invocation.HTTP Request(Play!)
-Caused by: org.hibernate.AnnotationException: No identifier specified for entity: models.inheritance.tableperclasshierarchy.Orange
-	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:268)
-	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:223)
-	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:686)
-	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:4035)
-	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3989)
-	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1398)
-	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1375)
-	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1519)
-	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
-	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1100)
-	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:904)
-	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:267)
-	... 5 more
-11 Jul 2013 16:44:41,019 ERROR ~ 
-
-@6f07hohfm
-Internal Server Error (500) for request GET /
-
-Oops: ClassCastException
-An unexpected error occured caused by exception ClassCastException: org.hibernate.mapping.SingleTableSubclass cannot be cast to org.hibernate.mapping.RootClass
-
-play.exceptions.UnexpectedException: Unexpected Error
-	at play.Play.start(Play.java:556)
-	at play.Play.detectChanges(Play.java:642)
-	at play.Invoker$Invocation.init(Invoker.java:198)
-	at Invocation.HTTP Request(Play!)
-Caused by: java.lang.ClassCastException: org.hibernate.mapping.SingleTableSubclass cannot be cast to org.hibernate.mapping.RootClass
-	at org.hibernate.cfg.annotations.PropertyBinder.bind(PropertyBinder.java:209)
-	at org.hibernate.cfg.annotations.PropertyBinder.makePropertyValueAndBind(PropertyBinder.java:200)
-	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:2061)
-	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:796)
-	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:707)
-	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processAnnotatedClassesQueue(Configuration.java:4035)
-	at org.hibernate.cfg.Configuration$MetadataSourceQueue.processMetadata(Configuration.java:3989)
-	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1398)
-	at org.hibernate.cfg.Configuration.buildMappings(Configuration.java:1375)
-	at org.hibernate.ejb.Ejb3Configuration.buildMappings(Ejb3Configuration.java:1519)
-	at org.hibernate.ejb.EventListenerConfigurator.configure(EventListenerConfigurator.java:193)
-	at org.hibernate.ejb.Ejb3Configuration.configure(Ejb3Configuration.java:1100)
-	at org.hibernate.ejb.Ejb3Configuration.buildEntityManagerFactory(Ejb3Configuration.java:904)
-	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:267)
-	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
-	at play.Play.start(Play.java:526)
-	... 3 more
+16 Jul 2013 17:46:09,249 INFO  ~ Starting /home/nigel/development/projects/myJPAapp
+16 Jul 2013 17:46:09,764 WARN  ~ You're running Play! in DEV mode
+16 Jul 2013 17:46:09,877 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+16 Jul 2013 17:46:17,926 INFO  ~ Connected to jdbc:mysql://localhost:3306/MyFirstModel?userUnicode=true&characterEncoding=utf8
+16 Jul 2013 17:46:19,329 INFO  ~ Application 'myJPAapp' is now started !
+16 Jul 2013 17:46:22,870 DEBUG ~ select bus0_.id as id8_, bus0_.number as number8_ from Bus bus0_ where bus0_.number=? limit ?
+16 Jul 2013 17:46:22,886 DEBUG ~ select bus0_.id as id8_, bus0_.number as number8_ from Bus bus0_ where bus0_.number=? limit ?
+16 Jul 2013 17:46:22,917 DEBUG ~ insert into User (address, age, name) values (?, ?, ?)
+16 Jul 2013 17:46:22,930 DEBUG ~ insert into Bus (number) values (?)
+16 Jul 2013 17:46:22,931 DEBUG ~ insert into Bus (number) values (?)
+16 Jul 2013 17:46:22,947 DEBUG ~ insert into Bus_MyFirstModel (Bus_id, MyFirstModel_id) values (?, ?)
+16 Jul 2013 17:46:22,950 DEBUG ~ insert into Bus_MyFirstModel (Bus_id, MyFirstModel_id) values (?, ?)
+16 Jul 2013 17:46:22,953 DEBUG ~ select bus0_.id as id8_, bus0_.number as number8_ from Bus bus0_ where bus0_.number=? limit ?
+16 Jul 2013 17:46:22,956 DEBUG ~ select bus0_.id as id8_, bus0_.number as number8_ from Bus bus0_ where bus0_.number=? limit ?
+16 Jul 2013 17:46:22,959 DEBUG ~ insert into User (address, age, name) values (?, ?, ?)
+16 Jul 2013 17:46:22,960 DEBUG ~ insert into Bus (number) values (?)
+16 Jul 2013 17:46:22,968 DEBUG ~ delete from Bus_MyFirstModel where Bus_id=?
+16 Jul 2013 17:46:22,969 DEBUG ~ insert into Bus_MyFirstModel (Bus_id, MyFirstModel_id) values (?, ?)
+16 Jul 2013 17:46:22,969 DEBUG ~ insert into Bus_MyFirstModel (Bus_id, MyFirstModel_id) values (?, ?)
+16 Jul 2013 17:46:22,970 DEBUG ~ insert into Bus_MyFirstModel (Bus_id, MyFirstModel_id) values (?, ?)
+16 Jul 2013 17:47:03,061 DEBUG ~ select bus0_.id as id35_, bus0_.number as number35_ from Bus bus0_ where bus0_.number=? limit ?
+16 Jul 2013 17:47:03,062 DEBUG ~ select bus0_.id as id35_, bus0_.number as number35_ from Bus bus0_ where bus0_.number=? limit ?
+16 Jul 2013 17:47:03,066 DEBUG ~ insert into User (address, age, name) values (?, ?, ?)
+16 Jul 2013 17:47:03,069 DEBUG ~ insert into Bus (number) values (?)
+16 Jul 2013 17:47:03,070 DEBUG ~ insert into Bus (number) values (?)
+16 Jul 2013 17:47:03,073 DEBUG ~ insert into Bus_User (Bus_id, User_id) values (?, ?)
+16 Jul 2013 17:47:03,073 DEBUG ~ insert into Bus_User (Bus_id, User_id) values (?, ?)
+16 Jul 2013 17:47:03,076 DEBUG ~ select bus0_.id as id35_, bus0_.number as number35_ from Bus bus0_ where bus0_.number=? limit ?
+16 Jul 2013 17:47:03,077 DEBUG ~ select bus0_.id as id35_, bus0_.number as number35_ from Bus bus0_ where bus0_.number=? limit ?
+16 Jul 2013 17:47:03,078 DEBUG ~ insert into User (address, age, name) values (?, ?, ?)
+16 Jul 2013 17:47:03,079 DEBUG ~ insert into Bus (number) values (?)
+16 Jul 2013 17:47:03,083 DEBUG ~ delete from Bus_User where Bus_id=?
+16 Jul 2013 17:47:03,084 DEBUG ~ insert into Bus_User (Bus_id, User_id) values (?, ?)
+16 Jul 2013 17:47:03,084 DEBUG ~ insert into Bus_User (Bus_id, User_id) values (?, ?)
+16 Jul 2013 17:47:03,085 DEBUG ~ insert into Bus_User (Bus_id, User_id) values (?, ?)
+16 Jul 2013 17:47:05,927 DEBUG ~ select bus0_.id as id35_, bus0_.number as number35_ from Bus bus0_ where bus0_.number=? limit ?
+16 Jul 2013 17:47:05,928 DEBUG ~ select bus0_.id as id35_, bus0_.number as number35_ from Bus bus0_ where bus0_.number=? limit ?
+16 Jul 2013 17:47:05,929 DEBUG ~ insert into User (address, age, name) values (?, ?, ?)
+16 Jul 2013 17:47:05,930 DEBUG ~ insert into Bus (number) values (?)
+16 Jul 2013 17:47:05,930 DEBUG ~ insert into Bus (number) values (?)
+16 Jul 2013 17:47:05,933 DEBUG ~ insert into Bus_User (Bus_id, User_id) values (?, ?)
+16 Jul 2013 17:47:05,933 DEBUG ~ insert into Bus_User (Bus_id, User_id) values (?, ?)
+16 Jul 2013 17:47:05,935 DEBUG ~ select bus0_.id as id35_, bus0_.number as number35_ from Bus bus0_ where bus0_.number=? limit ?
+16 Jul 2013 17:47:05,937 DEBUG ~ select bus0_.id as id35_, bus0_.number as number35_ from Bus bus0_ where bus0_.number=? limit ?
+16 Jul 2013 17:47:05,938 DEBUG ~ insert into User (address, age, name) values (?, ?, ?)
+16 Jul 2013 17:47:05,939 DEBUG ~ insert into Bus (number) values (?)
+16 Jul 2013 17:47:05,943 DEBUG ~ delete from Bus_User where Bus_id=?
+16 Jul 2013 17:47:05,945 DEBUG ~ insert into Bus_User (Bus_id, User_id) values (?, ?)
+16 Jul 2013 17:47:05,945 DEBUG ~ insert into Bus_User (Bus_id, User_id) values (?, ?)
+16 Jul 2013 17:47:05,946 DEBUG ~ insert into Bus_User (Bus_id, User_id) values (?, ?)

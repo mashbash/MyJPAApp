@@ -8,14 +8,14 @@ import play.db.jpa.*;
 public class Hobby extends Model {
 	
 	@ManyToOne
-	public MyFirstModel participant; 
+	public User participant; 
 	
 	
 	public String name;
 	public String mainOrNiche;
 	public Boolean timeConsuming;
 	
-	public Hobby(MyFirstModel participant, String name, String mainOrNiche, Boolean timeConsuming) {
+	public Hobby(User participant, String name, String mainOrNiche, Boolean timeConsuming) {
 		this.participant = participant;
 		this.name = name;
 		this.mainOrNiche = mainOrNiche;
